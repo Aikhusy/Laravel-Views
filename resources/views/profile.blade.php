@@ -7,8 +7,13 @@
 @stop
 
 @section('content')
-    <p>Syaikhul Shafwan R</p><br>
-    <p></p>@include('footer')
+@foreach ($data as $isi)
+    <p>ID {{$isi['id']}}</p> <br>
+    <p>name {{$isi['name']}}</p> <br>
+    <p>level {{$isi['level']}}</p> <br>
+    <p>gold {{$isi['gold']}}</p> <br>
+    @include('footer')
+@endforeach
 @stop
 
 @section('css')

@@ -3,7 +3,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\fetchers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +29,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 route::view('/adminlte','bootstrap');
 route::view('/adminlte/profile','profile');
 route::view('/adminlte/pengalamanKuliah','pengalaman');
+
+route::get('test',[fetchers::class,'show']);
